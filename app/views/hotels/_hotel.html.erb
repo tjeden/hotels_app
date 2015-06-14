@@ -1,0 +1,10 @@
+<tr data-id=<%=hotel.id%> >
+  <td><%= hotel.name %></td>
+  <td><%= link_to 'Show', hotel, remote: true, 
+    data: { show: 'hotel'} %></td>
+  <td><%= link_to 'Edit', edit_hotel_path(hotel) %></td>
+  <td><%= link_to 'Destroy', hotel, method: :delete, 
+    remote: true, 
+    data: { confirm: 'Czy jesteś pewny?',
+      hotel: hotel.id, delete: 'hotel'} %></td>
+</tr>
